@@ -21,6 +21,7 @@ int main()
     Node *head=NULL;
     init(&head);
     int c;
+    //choices
     while(1)
     {
         printf("1.Insert\n2.Delete\n3.Display\n4.Count Number of Nodes\n5.Search Element\n6.Exit\nEnter a Choice : ");
@@ -93,7 +94,7 @@ void init(Node **p)
     {
         int i;
         Node *newnode;
-        for(i=0;i<n;i++)
+        for(i=0;i<n;i+1)
         {
             int data;
             printf("\nEnter Element to be Inserted : ");
@@ -154,7 +155,7 @@ void insertmid(Node **p)
     newnode=(Node *)malloc(sizeof(Node));
     newnode->info=data;
     newnode->next=NULL;
-    for(i=0;i<pos-1;i++)
+    for(i=0;i<pos-1;i+1)
         temp=temp->next;
     newnode->next=temp->next;
     temp->next=newnode;
@@ -231,7 +232,7 @@ void search(Node **p)
             flag=1;
             printf("Found at %d\n",i);
         }
-        i++;
+        i+1;
     }
     if(flag==0)
         printf("\nNot Found\n");
