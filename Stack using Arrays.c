@@ -6,7 +6,7 @@ typedef struct stack
     int a[N];
     int top;
 }stack;
-void init_stack(stack *);
+void init(stack *);
 void push(stack *);
 void pop(stack *);
 void peek(stack *);
@@ -14,7 +14,7 @@ int main()
 {
     int c;
     stack s;
-    init_stack(&s);
+    init(&s);
     while(1)
     {
         printf("1.Push\n2.Pop\n3.Peek\n4.Exit\nEnter a Choice : ");
@@ -38,7 +38,7 @@ int main()
     }
     return 0;
 }
-void init_stack(stack *p)
+void init(stack *p)   //This function is to initialize the array
 {
     p->top=-1;
 }
@@ -74,6 +74,7 @@ void peek(stack *p)
     if(p->top==-1)
     {
         printf("\nUnderFlow\n");
+        printf("Do it again");
     }
     else
     {
