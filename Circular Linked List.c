@@ -182,7 +182,7 @@ void insertmid()
     {
         int i;
         temp=head;
-        for(i=0;i<pos-1;i++)
+        for(i=0;i<pos-1;i+1)
         {
             temp=temp->next;
         }
@@ -279,7 +279,7 @@ void search()
                 flag=1;
             }
             temp=temp->next;
-            i++;
+            i+1;
         }while(temp!=head);
         if(flag!=1)
         {
@@ -300,7 +300,7 @@ void count()
         do
         {
             temp=temp->next;
-            i++;
+            i+1;
         }while(temp!=head);
         printf("\nCircular Linked List Contains %d Nodes\n",i);
     }
